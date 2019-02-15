@@ -9,3 +9,7 @@ Network architecture: DNN.py
 ##### To run:
 
 python train_test.py filename_train filename_model filename_test filename_output
+
+
+
+
