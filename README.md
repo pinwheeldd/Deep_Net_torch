@@ -1,6 +1,8 @@
-# Fully Connected Neural Network for Event Level Classification
+# Fully Connected Neural Network for Event Level Classification 
 
-Sample: top hadronic decay vs 6 QCD jet events
+Requirement: Pytorch
+
+Classification goal: top hadronic decay vs 6 QCD jet events
 
 Input data format: four vectors of all 6 jets in event are fed into the fully connected NN.
 
