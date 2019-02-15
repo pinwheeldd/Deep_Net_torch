@@ -7,7 +7,7 @@ import pickle
 import time
 import os
 import click
-from wrapping import wrap, unwrap, wrap_X, unwrap_X
+from utils import wrap, unwrap, wrap_X, unwrap_X
 from sklearn.cross_validation import train_test_split
 from sklearn.metrics import roc_auc_score
 from sklearn.preprocessing import RobustScaler
@@ -82,7 +82,7 @@ def train(filename_train,filename_model,filename_test,filename_output, n_events=
         X[i] = tf_features.transform(X[i])
         
         if len(X[i]) < n_particles_per_event:
-           X[i] = np.vstack([X[i],np.zeros((n_particles_per_event - len(X[i]), 4))])
+            X[i] = np.vstack([X[i],np.zeros((n_particles_per_event - len(X[i]), 4))]) ## padding
 
     # Split into train+validation
     logging.info("Splitting into train and validation...")
